@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>표 만들기</title>
+
+
+  <style>
+    table, th, td {
+      border : 1px solid #ccc;
+    }
+
+    /* 상하 10, 좌우 20 */
+    th, td {
+      padding: 10px 20px;
+    }
+
+
+  </style>
+
+</head>
+<body>
+  <table>
+    <caption>
+      선물용과 가정용 상품 구성
+    </caption>
+
+    <thead>
+      <colgroup>
+        <col style="background-color: cadetblue;">
+        <col style="width: 150px;">
+        <col style="width: 150px;">
+
+        <!-- tr : 행,  th : 열-->
+        <tr>
+          <th>용도</th>
+          <th>중량</th>
+          <th>갯수</th>
+          <th>가격</th>
+        </tr>
+      </colgroup>
+    </thead>
+
+    <!-- tbody, thead : 
+    css가 바뀌는 것은 아니지만 
+    시각 장애인을 위해 구조 구분, 
+     tbody 부분만 스크롤 가능하게 할 수도 있음 -->
+    <tbody>
+      <tr>
+        <td rowspan="2" style="width: 70px;" style="height: 70px;">선물용</td>
+        <td>3kg</td>
+        <td>11~16과</td>
+        <td>35,000원</td>
+      </tr>
+  
+      <tr>
+        <td>3kg</td>
+        <td>11~16과</td>
+        <td>35,000원</td>
+      </tr>
+      
+      <tr>
+        <td rowspan="2">가정용</td>
+        <td>3kg</td>
+        <td>11~16과</td>
+        <td>35,000원</td>
+      </tr>  
+
+      <tr>
+        <td>3kg</td>
+        <td>11~16과</td>
+        <td>35,000원</td>
+      </tr>  
+
+    </tbody>
+
+  </table>
+</body>
+</html>

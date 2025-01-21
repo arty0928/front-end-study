@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>라벨 테스트</title>
+</head>
+<body>
+  <h1>이것은 라벨 테스트~~~</h1>
+
+  <h2>아이디, 비밀번호</h2>
+  <!-- 아이디, 비밀번호 -->
+   <!-- autofocus : 이 화면이 보이자마자 클릭하지 않아도 깜빡깜빡 -->
+    <!-- required : 필수 필드 -->
+  <form>
+    <fieldset>
+      <label>아이디 : <input 
+        type="text" 
+        id="user-id" 
+        autofocus
+        required
+        ></label>
+
+      <label>비밀번호 : <input type="password" id="user-pw"></label>
+
+    </fieldset>
+  
+    <h2>배송정보</h2>
+    <!-- 배송정보 -->
+
+    <!-- readonly : 수정 불가능 -->
+    <ul>
+      <li>
+        <label for="user-name">이름</label>
+        <input type="text" id="user-name" value="홍길동" readonly>
+      </li>
+
+      <li>
+        <label for="user-address">배송주소</label>
+        <input type="hidden" id="user-address" value="사이트를 통해서 직접 입력하세요.">
+      </li>
+
+      <li>
+        <label for="mail">이메일</label>
+        <input type="email" id="mail">
+      </li>
+
+      <!-- placeholder : 무엇을 입력해야 하는지 가이드라인 -->
+      <li>
+        <label for="phone">연락처</label>
+        <input type="tel" id="phone" placeholder="하이픈을 빼고 입력해 주세요. (ex. 01012345678)">
+      </li>
+
+      <li>
+        <label for="memo">메모</label>
+        <textarea id="memo" cols="40" rows="4"></textarea>
+      </li>
+
+      <!-- selected 기본 선택된 값 -->
+      <li>
+        <label for="prod1">상품 선택</label>
+        <select id="prod1">
+          <option value="special_3">선물용 3kg</option>
+          <option value="special_5" selected>선물용 5kg</option>
+          <option value="family_3">가정용 3kg</option>
+          <option value="family_5">가정용 5kg</option>
+
+        </select>
+      </li>
+
+    </ul>
+
+    <!-- 라디오 버튼, 체크박스 버튼 -->
+     <fieldset>
+      <legend>상품 선택</legend>
+      <p><b>주문할 상품을 선택해 주세요.</b></p>
+
+      <!-- s_3: 서버에 보낼 때 값이 영문이거나 숫자여야 -->
+      <ul>
+        <li>
+          <label><input type="checkbox" name="prod" value="s_3">선물용 3kg</label>
+          <input type="number" min="0" max="5">개 (최대 5개)
+        
+        </li>
+
+        <!-- value : 기본 값 -->
+        <li>
+          <label><input type="checkbox" name="prod" value="s_5">선물용 5kg</label>
+          <input type="number" min="0" max="3" value="1">개 (최대 3개)
+        
+        </li>
+
+        <!-- step : @단계 씩 -->
+        <li>
+          <label><input type="checkbox" name="prod" value="f_3">가정용 3kg</label>
+          <input type="range" min="0" max="100" step="10" value="20">
+        </li>
+
+        <li>
+          <label><input type="checkbox" name="prod" value="f_5">가정용 5kg</label>
+        </li>
+      </ul>
+
+      <p><b>포장 선택</b></p>
+      <ul>
+        <li><label>
+          <input type="radio" name="gift" value="yes">선물 포장
+        </label></li>
+
+        <li><label>
+          <input type="radio" name="gift" value="no">선물 포장 안함
+        </label></li>
+      </ul>
+
+     </fieldset>
+
+     <fieldset>
+      <input type="file">
+      <hr>
+      <input type="submit" value="반품 신청">
+      <input type="reset" value="취소하기">
+     </fieldset>
+
+     <!-- date, month, week -->
+     <fieldset>
+      <input type="date">
+      <input type="month">
+      <input type="week">
+      <input type="time">
+      <input type="datetime-local">
+     </fieldset>
+
+     <!-- 주의 : 버튼은 타입을 명시해야 함! -->
+     <button type="submit">주문하기</button>
+     <button type="reset">취소하기</button>
+     <button type="button">취소하기</button>
+
+     <hr>
+     <input type="submit" value="반품 신청">
+     <input type="reset" value="취소하기">
+  
+  </form>
+
+  
+
+
+</body>
+</html>
