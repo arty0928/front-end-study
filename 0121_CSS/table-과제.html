@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <style>
+    table{
+      caption-side: bottom;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    td, th {
+      border: 1px dotted black;
+      text-align: center;
+      padding: 10px;
+    }
+
+    caption{
+      text-align: right;
+    }
+
+    .col-2022 {
+      background: #e5f6f6;
+    }
+  </style>
+
+
+</head>
+<body>
+  <table>
+    <caption>출처 : 통계청 100대 지표</caption>
+
+    <colgroup>
+      <col>  <!-- /* 1번째 열 -->
+      <col span="3"> <!-- /* 2,3,4번째 열 -->
+      <col class="col-2022"> <!-- /* 5번째 열 -->
+    </colgroup>
+
+
+    <thead>
+      <tr>
+        <td>지표</td>
+        <td>2019</td>
+        <td>2020</td>
+        <td>2021</td>
+        <td>2022</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>가구수</td>
+        <td>2,000</td>
+        <td>221,121</td>
+        <td>21,212</td>
+        <td>2,022,113</td>
+
+      </tr>
+
+      <tr>
+        <td>1인 가구</td>
+        <td>2,000</td>
+        <td>221,121</td>
+        <td>21,212</td>
+        <td>2,022,113</td>
+
+      </tr>
+    </tbody>
+
+  </table>
+  
+</body>
+</html>
