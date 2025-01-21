@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스모델</title>
+
+  <style>
+    .wrapper {
+      width: 500px;
+      margin: 10px auto;
+      border: 1px solid #ccc;
+      padding: 20px;
+
+    }
+
+    .box{
+      padding: 20px;
+      margin: 10px;
+    }
+
+    #box1{
+      background-color: #ffd800;
+      float: left;
+    }
+
+    #box2{
+      background-color: #0094ff;
+      float: right;
+    }
+
+    .clear{
+      /* float 속성 무효화 */
+      clear: both;
+      padding-top: 20px;
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="box" id="box1">box1</div>
+    <div class="box" id="box2">box2</div>
+
+    <p>아테나아테나아테나 아테나 아테나 아테나 아테나 아테나 </p>
+    <p class="clear">아테나 아테나아테나아테나아테나 아테나 아테나 아테나 아테나 아테나 아테나 아테나아테나아테나아테나 아테나 아테나 아테나 아테나 아테나 아테나 아테나아테나아테나아테나 아테나 아테나 아테나 아테나 아테나 아테나 아테나아테나아테나아테나 아테나 아테나 아테나 아테나 아테나 </p>
+
+  </div>
+  
+</body>
+</html>
