@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#contents {
+  background: url('../images/bg.jpg') no-repeat;
+  background-size: cover;
+  width: 800px;
+  height: 500px;
+  /* div 기준으로 rigth 100px, bottom 100px 설정 */
+  position: relative;
+}
+
+h1 {
+  color: white;
+  font-size: 120px;
+  text-shadow: 5px 9px 10px #000;
+  /* absolute는 항상 relative와 같이 다님 */
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+
+}
