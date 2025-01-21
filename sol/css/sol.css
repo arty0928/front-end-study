@@ -1,0 +1,41 @@
+* {
+  text-align: center;
+  line-height: 1.5;
+}
+
+#container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#card {
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  border-radius: 50%;
+  width: 150px;
+  border: 1px solid #eee;
+}
+
+#card div {
+  padding: 50px;
+  border: 1px solid #eee;
+  width: 180px;
+  height: 300px;
+  border-radius: 30px;
+}
+
+h2 {
+  margin: 30px;
+}
+
+.smalltitle{
+  color: #ccc;
+}
+
+h1 {
+  -webkit-text-stroke: 0.5px black;
+  color: #bbb;
+}
