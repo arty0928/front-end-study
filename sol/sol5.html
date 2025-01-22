@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>card</title>
+
+  <style>
+    body{
+      text-align: center;
+      font-weight: bold;
+      background-color: rgb(9, 100, 160);
+    }
+
+    .card{
+      border: 1px solid black;
+      background-color: white;
+    }
+
+    .content{
+      font-size: 1.2em; 
+    }
+
+    img {
+      background-image: fill;
+    }
+
+    @media screen and (max-width : 767px) {
+      body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #container{
+        align-content: center;
+        width: 320px;
+        padding: 20px;
+        margin: 0 auto;
+        /* justify-content: center; */
+      }
+
+      .card{
+        width: 300px;
+        /* display: f; */
+        justify-content: space-between;
+        margin: 20px;
+      }
+
+      .text{
+        padding: 1em;
+      }
+    }
+
+    @media screen and (min-width : 768px) and (max-width : 1023px){
+      body{
+        display: flex;
+      }
+
+      #container{
+        width: 570px;
+      }
+
+      #card {
+        width: 570px;
+        height: 200px;
+      }
+
+      img {
+        justify-content: left;
+        object-fit: contain;
+      }
+    }
+
+    @media screen and (min-width : 1440px){
+      body {
+        display: flex;
+      }
+
+      #container{
+        width: 1140px;
+      }
+
+      #card {
+        display: flex;
+        width: 570px;
+      }
+    }
+  </style>
+
+
+</head>
+<body>
+
+  <div id="container">
+
+    <div class="card">
+      <img src="/images/10/images/1.jpg">
+
+      <div class="text">
+        <p class="content">일 분 전만큼 먼 시간은 없다. <p id="author">- Jim Bishop</p> </p>
+      </div>
+
+    </div>
+  
+    <div class="card">
+      <img src="/images/10/images/2.jpg">
+      <div class="text">
+        <p class="content">낡은 옷은 그냥 입고 새 책을 사라. <p id="author">- Austin Phelps - </p></p>
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+</html>
