@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선형 그라데이션</title>
+
+  <style>
+    div {
+      border: 1px solid #222;
+      width: 500px;
+      height: 300px;
+      border-radius: 50px;
+    }
+
+    .grad1{
+      background: blue;
+      /* 왼쪽 위에서 오른쪽 아래 방향으로, 파랑색 -> 흰색 그라데이션 */
+      background: linear-gradient(to right bottom, rgb(122, 255, 6), white);
+    }
+
+    .grad2{
+      background: red;
+      /* 45도 각도로, red -> 흰색 그라데이션 */
+      background: linear-gradient(45deg, #f00, #fff);
+    }
+
+    .grad3{
+      /* css3를 지원하지 않는 경우 그라데이션이 지원되지 않는 경우, background로 색 대체 */
+      background: rgb(149, 86, 132);
+      /* 위에서부터 30% 위치에 색상 중지점 지정 그라데이션 */
+      background: linear-gradient(
+        to bottom, green, white 30%, blue
+      );
+    }
+
+
+  </style>
+
+
+</head>
+<body>
+    <div class="grad1"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+
+
+</body>
+</html>
