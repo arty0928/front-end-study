@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+   
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      gap: 10px;
+    }
+
+    .gallery img {
+      width: 80%;
+      border-radius: 50%;
+    }
+    .title{
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .image-container{
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+
+  /* <!-- filter 함수를 사용해서 스타일 지정 --> */
+    .blur {
+      filter: blur(5px);
+    }
+    /* 밝기 2배 */
+    .brightness {filter: brightness(2);}
+    /* 대비 백분률, 100%가 원본 */
+    .contrast {filter: contrast(200%);}
+    .drop-shadow {filter: drop-shadow(16px 16px 10px black);}
+    /* 반전 */
+    .invert {filter: invert(100%);}
+    /* 흑백 */
+    .grayscale{filter: grayscale(100%);}
+    .sephia {filter: sepia(100%);}
+    /* 투명도 */
+    .opacity {filter: opacity(50%);}
+    /* 90도  */
+    .hue-rotate {filter: hue-rotate(90deg);}
+    /* 채도 */
+    .saturate {filter: saturate(200%);}
+  </style>
+
+</head>
+<body>
+  <div class="orgin">
+    <img src="/images/10/images/cat.png" style="border-radius: 50%;">
+  </div>
+  <div class="gallery">
+    <div class="image-container">
+      <div class="title">filter:blur(5px)</div>
+      <img src="/images/10/images/cat.png" class="blur">
+    </div>
+    <div class="image-container">
+      <div class="title">filter:brightness(2)</div>
+      <img src="/images/10/images/cat.png" class="brightness">
+    </div>
+    <div class="image-container">
+      <div class="title">filter:contrast(200%)</div>
+      <img src="/images/10/images/cat.png" class="contrast">
+    </div>
+    <div class="image-container">
+      <div class="title">filter:drop-shadow(16px 16px 10px black)</div>
+      <img src="/images/10/images/cat.png" class="drop-shadow">
+    </div>
+    <div class="image-container">
+      <div class="title">filter:grayscale(100%)</div>
+      <img src="/images/10/images/cat.png" class="grayscale">
+    </div>
+    <div class="image-container">
+      <div class="title">filter:invert(100%)</div>
+      <img src="/images/10/images/cat.png" class="invert">
+    </div>
+    <div class="image-container">
+      <div class="title">filter:sepia(100%)</div>
+      <img src="/images/10/images/cat.png" class="sepia">
+    </div>
+    <div class="image-container">
+      <div class="title">filter:opacity(50%)</div>
+      <img src="/images/10/images/cat.png" class="opacity">
+    </div>
+    <div class="image-container">
+      <div class="title">filter:hue-rotate(90deg)</div>
+      <img src="/images/10/images/cat.png" class="hue-rotate">
+    </div>
+    <div class="image-container">
+      <div class="title">filter:saturate(200%)</div>
+      <img src="/images/10/images/cat.png" class="saturate">
+    </div>
+  </div>
+</body>
+
+</html>
