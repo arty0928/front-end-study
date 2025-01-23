@@ -4,11 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>박은서 자기소개</title>
+
+  <style>
+    body{
+      margin: 0 auto;
+    }
+
+    .header .menu ul li {
+      list-style: none;
+    }
+
+    .header .menu ul li a{
+      text-decoration: none;
+      color: black;
+    }
+
+    img{
+      border-radius: 50%;
+      filter: drop-shadow(16px 16px 10px #eee);
+    }
+
+    @media (min-width : 600px){
+      body{
+        width: 600px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1{
+        text-align: center;
+      }
+
+      .header {
+        width: 100%;
+      }
+
+      .header .menu{
+        justify-content: space-around;
+        margin: 0;
+      }
+
+      .header .menu ul{
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+      }
+
+      .header .menu ul li {
+        padding: 20px;
+      }
+      
+      .plan-contents ol {
+        list-style: none;
+        text-align: center;
+      }
+
+      .exp-contents{
+        text-align: center;
+      }
+
+      .hobby-contents{
+        text-align: center;
+      }
+
+      .blue{
+        font-weight: bold;
+        color: rgb(0, 0, 132);
+      }
+
+    }
+
+  </style>
 </head>
 <body>
 
-  <div class="container">
-    <nav>
+  <div class="header">
+
+    <h1>FE 박은서</h1>
+
+    <nav class="menu">
       <ul>
         <li class="info"><a href="info">자기소개</a></li>
         <li class="experience"><a href="info">좋았던 경험</a></li>
@@ -20,19 +96,47 @@
 
   </div>
 
+  <div class="container">
+    
+      <div class="info-main">
+        <div class="info-contents">
+          <img src="/images/03/images/activity.jpg">
+          <div class="info-text">
+            <p><b>전공</b> : 기술경영 (원전공) + 컴퓨터 (복수전공) </p>
+            <p><b>MBTI</b> : ENFJ -> INTJ </p>
+          </div>
+        </div>
+      </div>
 
-  <h1>자기소개</h1>
-    <p>전공 : 기술경영 (원전공) + 컴퓨터 (복수전공) </p>
-    <p>MBTI : ENFJ -> INTJ </p>
+    <div class="exp-main">
+      <div class="exp-contents">
+        <img src="/images/03/images/activity.jpg">
+        
+        <p>혼자 상하이 여행!</p>
+        <p>중국인들 사이 중국인인 척 하기! 혼자만의 시간으로 힐링</p>
+      </div>
+    </div>
+      
+    <div class="hobby-main">
+      <div class="hobby-contents">
+        <p>정리하기 <span class="blue">(파워J)</span></p>
+      </div>
+    </div>
 
-  <h1>좋았던 경험</h1>
-    <p>혼자 상하이 여행!</p>
-    <p>중국인들 사이 중국인인 척 하기! 혼자만의 시간으로 힐링</p>
+    <div class="plan-main">
+      <div class="plan-contents">
+        <ol>
+          <li>주차 배운 내용 복습 끝내기</li>
+          <li>알고리즘 문제 <span class="blue">2회독</span> 이상</li>
+          <li><span class="blue">CS 스터디</span> 잘 진행하기</li>
+          <li>github 정리하기</li>
+          <li>2025년 취업하기!</li>
+        </ol>
+      </div>
+    </div>
 
-  <h1>취미와 관심사</h1>
-    <p>정리하기 (파워J) </p>
+  </div>
 
-  <h1>계획</h1>
 
   
 </body>
