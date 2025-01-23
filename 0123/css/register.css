@@ -59,6 +59,7 @@ body {
 */
 #signup input:not([type='radio']) {
   border: 1px solid #ccc;
+  border-radius: 5px;
   font-size: 13px;
   padding: 5px;
   width: 200px;
