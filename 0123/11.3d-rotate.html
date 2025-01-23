@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3차원 회전</title>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: space-around;
+      gap: 10px;
+    }
+
+    /* 회전하는 것의 부모에 perspective 적용해야 함 */
+    .origin {
+      perspective: 300px;
+      border: 1px solid black;
+    }
+
+    .origin > div {
+      /* 트랜지션 효과 추가 */
+      transition: all 3s; /* 3초 동안 천천히 회전 */
+
+    }
+
+    #rotate1:hover {
+      transform: rotateX(50deg);
+    }
+
+    #rotate2:hover{
+      transform: rotateY(50deg);
+    }
+
+    #rotate3 {
+      transform: rotateZ(50deg);
+    }
+
+    #rotate4{
+      /* transform: rotateX(50deg) rotateZ(-50deg); */
+      transform: rotate3d(2.5, 1.2,-1.5, 55deg); /*x,y,z 축으로 55도 회전*/
+    }
+  </style>
+
+
+</head>
+<body>
+  <div class="origin">
+    <div class="rotatex" id="rotate1">
+      <img src="/images/14/images/sunset.jpg">
+    </div>
+  </div>
+
+  <div class="origin" >
+    <div class="rotatex" id="rotate2">
+      <img src="/images/14/images/sunset.jpg">
+    </div>
+  </div>
+
+  <div class="origin" >
+    <div class="rotatex" id="rotate3">
+      <img src="/images/14/images/sunset.jpg">
+    </div>
+  </div>
+
+  <div class="origin" >
+    <div class="rotatex" id="rotate4">
+      <img src="/images/14/images/sunset.jpg">
+    </div>
+  </div>
+
+</body>
+</html>
