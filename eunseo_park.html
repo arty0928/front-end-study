@@ -8,6 +8,7 @@
   <style>
     body{
       margin: 0 auto;
+      max-width: 100%; /* 최대 너비를 100%로 설정 */
     }
 
     .header .menu ul li {
@@ -19,20 +20,55 @@
       color: black;
     }
 
-    img{
-      border-radius: 50%;
-      filter: drop-shadow(16px 16px 10px #eee);
+    .contents {
+      display: flex;
+      justify-content: center;
     }
 
-    @media (min-width : 600px){
+    img{
+      filter: drop-shadow(10px 10px 10px #ccc);
+      object-fit: contain;
+    }
+
+    .menu a:link, 
+    .menu a:visited {
+      display: block;
+      font-size: 14px;
+      color: black;
+      padding: 10px;
+    }
+
+    .menu a:hover,
+    .menu a:focus{
+      background-color: #222;
+      border-radius: 5px;
+      color: white;
+    }
+
+    .menu a:active {
+      background-color: blanchedalmond;
+    }
+    
+
+    @media (max-width : 600px){
       body{
-        width: 600px;
-        height: 100vh;
+        width: 100vw;
+        height: auto; /* 높이는 자동 조절 */
         display: flex;
         flex-direction: column;
         align-items: center;
       }
 
+      .image{
+        background: url('/개인사진1.jpg') no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 200px;
+        border-top-left-radius: 45px;
+        border-top-right-radius: 45px; /* 왜 적용 안돼.. */
+      }
+
+      /* header */
       h1{
         text-align: center;
       }
@@ -52,20 +88,41 @@
         padding: 0;
       }
 
-      .header .menu ul li {
-        padding: 20px;
+      /* main */ 
+      .contents {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
       }
-      
-      .plan-contents ol {
+
+      .shanghai-video{
+        border-radius: 50%;
+        overflow: hidden;
+        width: 100px;
+        height: 200px;
+      }
+
+      .shanghai-video video {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+      }
+
+      video{
+        width: 130px;
+        filter: drop-shadow(10px 10px 10px #ccc);
+        border-top-right-radius: 45px;
+        border-top-left-radius: 45px;
+      }
+
+      .contents ol {
         list-style: none;
         text-align: center;
+        line-height: 2;
       }
 
-      .exp-contents{
-        text-align: center;
-      }
-
-      .hobby-contents{
+      .contents{
         text-align: center;
       }
 
@@ -86,10 +143,10 @@
 
     <nav class="menu">
       <ul>
-        <li class="info"><a href="info">자기소개</a></li>
-        <li class="experience"><a href="info">좋았던 경험</a></li>
-        <li class="hobby"><a href="info">취미와 관심사</a></li>
-        <li class="plan"><a href="info">계획</a></li>
+        <li class="info"><a href="#info" onclick="showContent('info-main')">자기소개</a></li>
+        <li class="experience"><a href="#exp"  onclick="showContent('exp-main')">좋았던 경험</a></li>
+        <li class="hobby"><a href="#hobby" onclick="showContent('hobby-main')">취미와 관심사</a></li>
+        <li class="plan"><a href="#plan"  onclick="showContent('plan-main')">계획</a></li>
 
       </ul>
     </nav>
@@ -99,8 +156,8 @@
   <div class="container">
     
       <div class="info-main">
-        <div class="info-contents">
-          <img src="/images/03/images/activity.jpg">
+        <div class="contents">
+          <div class="image"></div>
           <div class="info-text">
             <p><b>전공</b> : 기술경영 (원전공) + 컴퓨터 (복수전공) </p>
             <p><b>MBTI</b> : ENFJ -> INTJ </p>
@@ -109,22 +166,33 @@
       </div>
 
     <div class="exp-main">
-      <div class="exp-contents">
-        <img src="/images/03/images/activity.jpg">
-        
+      <div class="contents">
+        <!-- <img src="/images/03/images/activity.jpg"> -->
+         <div class="shaghai-video">
+            <video loop autoplay muted>
+              <source src="/video/shanghai.mp4" type="video/mp4">
+              영상이 제공되지 않습니다.
+            </video>
+         </div>
         <p>혼자 상하이 여행!</p>
-        <p>중국인들 사이 중국인인 척 하기! 혼자만의 시간으로 힐링</p>
+        <p>중국인들 사이 중국인인 척 하기!<br>혼자만의 시간으로 힐링</p>
       </div>
     </div>
       
     <div class="hobby-main">
-      <div class="hobby-contents">
-        <p>정리하기 <span class="blue">(파워J)</span></p>
+      <div class="contents">
+        <ol>
+          <li>정리하기 <span class="blue">(파워J)</span></li>
+          <li>카공하기</li>
+          <li>노래듣기</li>
+          <li>영화보기</li>
+        </ol>
+        <p></p>
       </div>
     </div>
 
     <div class="plan-main">
-      <div class="plan-contents">
+      <div class="contents">
         <ol>
           <li>주차 배운 내용 복습 끝내기</li>
           <li>알고리즘 문제 <span class="blue">2회독</span> 이상</li>
