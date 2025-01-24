@@ -29,6 +29,14 @@
       object-fit: contain;
     }
 
+    nav:has(a:hover) a:not(:hover){
+      opacity: 0.5;
+    }
+
+    /* nav:has(a:hover) a:not(:hover){
+      opacity: 0.3;
+    } */
+
     .menu a:link, 
     .menu a:visited {
       display: block;
@@ -40,7 +48,6 @@
     .menu a:hover,
     .menu a:focus{
       background-color: #222;
-      border-radius: 5px;
       color: white;
     }
 
@@ -69,13 +76,22 @@
         border-top-right-radius: 45px;
       }
 
+      .container {
+        margin: 30px auto;
+      }
+
       /* header */
       h1{
         text-align: center;
       }
 
+      .header ul {
+        margin: 0;
+      }
+
       .header {
         width: 100%;
+        background-color: #eee;
       }
 
       .header .menu{
@@ -90,10 +106,19 @@
       }
 
       /* main */ 
+      /* div속성 값 중 class 명이 main을 포함하는 선택자 */
+      div[class *=main]{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+      }
+
       .contents {
+        height: 80%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         flex-direction: column;
       }
 
@@ -125,6 +150,12 @@
 
       .contents{
         text-align: center;
+      }
+
+      .plan-main .contents, .hobby-main .contents {
+        margin: 10px 20px;
+        border-radius: 20px;
+        background-color: #eee;
       }
 
       .blue{
