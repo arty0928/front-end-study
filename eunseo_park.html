@@ -54,6 +54,77 @@
     .menu a:active {
       background-color: blanchedalmond;
     }
+
+    @media (min-width : 600px){
+      body{
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+      }
+      
+      p, h1{
+        text-align: center;
+      }
+
+      .image{
+        background-position: center center;
+        margin: 0 auto;
+        background: url('/개인사진1.jpg') no-repeat;
+        background-size: contain;
+        width: 150px;
+        height: 200px;
+        border-top-left-radius: 45px;
+        border-top-right-radius: 45px;
+      }
+
+      .header{
+        text-align: center;
+        margin: 10px 0;
+        background-color: #eee;
+      }
+
+      .container{
+        display: flex;
+        flex-direction: column;
+      }
+      div [class *=main]{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contents{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      div[class *=main]{
+        width: 100%;
+      }
+
+      .shanghai-video{
+        border-radius: 50%;
+        overflow: hidden;
+        width: 100px;
+        height: 200px;
+      }
+
+      .shanghai-video video {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+      }
+
+      video{
+        width: 150px;
+        filter: drop-shadow(10px 10px 10px #ccc);
+        border-top-right-radius: 45px;
+        border-top-left-radius: 45px;
+      }
+
+    }
     
 
     @media (max-width : 600px){
@@ -108,14 +179,13 @@
       /* main */ 
       /* div속성 값 중 class 명이 main을 포함하는 선택자 */
       div[class *=main]{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 400px;
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        margin: 20px 0;
       }
 
       .contents {
-        height: 80%;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -173,7 +243,7 @@
 
     <h1>FE 박은서</h1>
 
-    <nav class="menu">
+    <!-- <nav class="menu">
       <ul>
         <li class="info"><a href="#info" onclick="showContent('info-main')">자기소개</a></li>
         <li class="experience"><a href="#exp"  onclick="showContent('exp-main')">좋았던 경험</a></li>
@@ -181,7 +251,7 @@
         <li class="plan"><a href="#plan"  onclick="showContent('plan-main')">계획</a></li>
 
       </ul>
-    </nav>
+    </nav> -->
 
   </div>
 
@@ -190,8 +260,11 @@
       <div class="info-main">
         <div class="contents">
 
+          <h1>자기소개</h1>
+
           <div class="image"></div>
           <div class="info-text">
+            <p><b>생년월일</b> : 2000. 09. 28 </p>
             <p><b>전공</b> : 기술경영 (원전공) + 컴퓨터 (복수전공) </p>
             <p><b>MBTI</b> : ENFJ -> INTJ </p>
           </div>
@@ -201,6 +274,7 @@
 
     <div class="exp-main">
       <div class="contents">
+        <h1>좋았던 경험</h1>
         <!-- <img src="/images/03/images/activity.jpg"> -->
          <div class="shaghai-video">
             <video loop autoplay muted>
@@ -214,20 +288,21 @@
     </div>
       
     <div class="hobby-main">
+      <h1>취미와 관심사</h1>
+
       <div class="contents">
         
         <p>정리하기 <span class="blue">파워J</span></p>
-        
-
-        <img>
         <p> 카공하기</p>
-
         <p>노래듣기</p>
         <p>영화보기</p>
+        <p><b>좋아하는 것</b> : 딸기 </p>
+
       </div>
     </div>
 
     <div class="plan-main">
+      <h1>앞으로 목표</h1>
       <div class="contents">
         
           <p>주차 배운 내용 복습 끝내기</p>
