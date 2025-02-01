@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수 만들기 연습문제</title>
+
+  <link rel="stylesheet" href="./css/sol1.css">
+
+</head>
+<body>
+  <script>
+
+    function calcSum(num){
+      let sum = 0;
+      
+      for(let i = 1; i <= num; i++){
+        console.log(i);
+        sum += i;
+      }
+      return sum;
+    }
+
+    let num = parseInt(prompt("얼마를 입력하시겠습니까?"));
+
+    document.write(`<h1>1부터 ${num}까지 더하면 ${calcSum(num)}</h1>`)
+
+  </script>
+  
+</body>
+</html>
