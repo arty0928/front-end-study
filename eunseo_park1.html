@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박은서</title>
+</head>
+    <style>
+        .container{
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 0;
+            max-width: 1200px;
+        }
+
+        .head{
+            background-color: aqua ;
+            position: fixed;
+            width: 100%;
+            max-width: 1200px;
+
+        }
+
+        .menu ul{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        /* pc */
+        @media (min-width : 768px){
+            .container{
+                width: 100%;
+                margin: 10px auto;
+                padding: 10px;
+                display: block;
+                
+            }
+
+            /* head 상단에 고정 */
+            .head{
+                box-sizing: border-box;
+            }
+
+            h1 {
+                padding: 20px;
+                margin: 0;
+                text-align: center;
+                background-color: bisque;
+            }
+
+            nav > ul{
+                margin: 0;
+                display: flex;
+                justify-content: space-around;
+                padding: 20px;
+            }
+
+            div ty {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            /* 컨텐츠 */
+            .main{
+                display: block;
+                margin: 150px auto;
+                margin-top: 200px;
+            }
+
+            .contents{
+                margin-bottom: 50px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin-left: 30px;
+                justify-content: flex-start;
+            }
+
+            #info-section,
+            #exp-section,
+            #hobby-section,
+            #plan-section {
+                height: 500px;
+                margin-bottom: 100px;
+            }
+
+            .myphoto {
+                height: 500px;
+                position: left;
+                border-top-right-radius: 50%;
+                border-top-left-radius: 50%;
+            }
+
+            .texts{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0 auto;
+            }
+
+
+        }
+
+        /* 모바일 */
+        @mdeia (max-width : 360px){
+
+        }
+
+    </style>
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>박은서</h1>
+
+            <nav class="menu">
+                <ul>
+                    <li class="info-navi" onclick="scrollToSection('info-section')" ><a href="#info">자기소개</a></li>
+                    <li class="exp-navi" onclick="scrollToSection('exp-section')"><a href="#info">좋았던 경험</a></li>
+                    <li class="hobby-navi" onclick="scrollToSection('hobby-section')"><a href="#info">취미와 관심사</a></li>
+                    <li class="plan-navi" onclick="scrollToSection('plan-section')"><a href="#info">계획</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main">
+            <div id="info-section">
+                <div class="contents">
+                    <img class="myphoto" src="개인사진1.jpg">
+                    <div class="texts">
+                        <p><b>전공 </b> : 기술경영 (원전공) + 컴퓨터 (복수전공)</p>
+                        <p><b>MBTI </b> : ENFJ → INTJ </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="exp-section">
+                <div class="contents">
+                    <video loop autoplay muted>
+                        <source src="/video/shanghai.mp4" type="video/mp4">
+                        영상이 제공되지 않습니다.
+                    </video>
+                    <div class="texts">
+                        <p>2024년 7월 혼자 간 상하이 여행입니다.</p>
+                        <p>혼자만의 시간으로 힐링하기 너무 좋았어요ㅠㅠ</p>
+                        <p>유레카에서 좋은 인연으로 나중에 여행도 같이 가는 사이가 되었으면 좋겠어요!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hobby-section">
+                <div class="contents">
+
+                    <div class="texts">
+                        <ul>
+                            <li>다이어리 쓰거나 인생 계획을 세우거나 일기를 쓰는 적는 것을 좋아합니다.</li>
+                            <li>예쁘게 꾸미고 카공가는 거 좋아하시는 분들 계세요?!?!</li>
+                            <li>노래 들으면서 씰룩거리기 ?</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div id="plan-section">
+                <div class="contents">
+
+                    <div class="texts">
+                        <ul>
+                            <li>주차 배운 내용 그 주에 복습 끝내기</li>
+                            <li>알고리즘 문제 2회독</li>
+                            <li><span class="accents">CS 스터디</span>잘 진행하기</li>
+                            <li>github 정리하기</li>
+                            <li>2025년 취업하기</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+            
+
+
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function scrollToSection(menu){
+            const section = document.getElementById(menu);
+            const headerOffset = document.querySelector('.head').offsetHeight; //헤더 높이
+            const elementPosition = section.getBoundingClientRect().top + window.scrollY - 100 //섹션 위치
+            const offsetPosition = elementPosition - headerOffset //중앙에 맞추기 위한 위치 조정
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior : "smooth" //부드러운 스크롤
+            })
+
+        }
+    </script>
+    
+</body>
+</html>
