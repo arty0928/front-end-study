@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>다크 모드</title>
+
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container{
+      border: 1px solid #ccc;
+      padding: 10px 50px;
+    }
+
+    #modeButton {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      padding: 10px;
+    }
+
+    .dark {
+      background-color: white;
+      color: black;
+      border: 1px solid #222;
+    }
+
+    .light {
+      background-color: black;
+      color: white;
+      border: 1px solid white;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Web Programming</h1>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Javascipt</li>
+    </ul>
+  </div>
+
+  <checkbox id="modeButton">
+    다크모드
+  </checkbox>
+
+  <script>
+
+      document.addEventListener('DOMContentLoaded', function(){
+        const button = document.querySelector('#modeButton');
+        const container = document.querySelector('.container');
+
+        button.addEventListener('change', function() {
+          document.body.classList.toggle('dark',this.checked);
+          document.body.classList.toggle('light',!this.checked);
+        });
+
+        document.body.style.backgroundColor = "black";
+        document.body.style.color="white";
+
+        button.innerText = "라이트모드";
+        button.style.color = 'white';
+        button.style.backgroundColor = 'black'
+        button.style.border = '1px solid white';
+
+        container.style.border = '1px solid #222'
+
+    });
+
+  </script>
+  
+</body>
+</html>
