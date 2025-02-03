@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom 이벤트 객체</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    </style>
+</head>
+<body>
+  <bid class="container">
+    <img src="/images/11/images/kitten-1.jpg" id="cat">
+
+
+  </bid>
+
+  <script>
+    //DOM을 사용해서 이벤트 처리하기
+    let cat = document.querySelector("#cat"); //id가 cat인 요소 찾기
+    // cat.onclick = () => {
+    //   alert("이미지를 클릭했습니다.");
+    // };
+    
+    cat.onclick = changePic; //cat 클릭하면 changePic 함수 실행
+    // 이미지가 변하는 함수
+    function changePic () {
+      cat.src = "/images/11/images/kitten-2.jpg"
+    };
+    
+  </script>
+  
+</body>
+</html>

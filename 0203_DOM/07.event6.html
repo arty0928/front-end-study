@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom - addEventListener</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    img{
+      padding: 20px;
+      height: 250px;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      box-shadow: 2px 2px 5px #ccc;
+    }
+    </style>
+</head>
+<body>
+  <bid class="container">
+    <img src="/images/11/images/kitten-1.jpg" id="cat">
+
+
+  </bid>
+
+  <script>
+    let cat = document.querySelector("#cat");
+
+    // 이벤트 리스너 안에서 함수 선언
+    cat.addEventListener("mouseover", () => {
+      cat.src = '/images/11/images/kitten-2.jpg';
+    });
+
+    cat.addEventListener("mouseout", () => {
+      cat.src = '/images/11/images/kitten-1.jpg';
+    }); 
+
+  </script>
+</body>
+</html>
