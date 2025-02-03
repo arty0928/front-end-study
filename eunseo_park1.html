@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FE 박은서입니다.</title>
+</head>
+    <style>
+
+        .container{
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 0;
+            max-width: 1000px;
+        }
+
+        .head{
+            position: fixed;
+            width: 100%;
+            max-width: 1200px;
+            border-radius: 50px;
+            box-shadow: 0 5px 18px rgb(0, 0, 0, 0.2);
+            z-index: 1000;
+            background-color: white;
+            opacity: 1;
+        }
+
+        h1{
+            color: rgb(73, 73, 73);
+        }
+
+        .menu ul{
+            list-style: none;
+            
+        }
+
+        a{
+            text-decoration: none;
+            color: gray;
+            font-size: 20px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        .menu li {
+            transition: transform 0.3s ease;
+        }
+
+        /*현재 보고 있는 섹션에 따라 메뉴 항목 커지기*/
+        .menu li.active{
+            transform: scale(1.2);
+        }
+
+        .menu li:hover{
+            color: red;
+            transform: scale(1.2);
+        }
+
+        /* pc */
+        @media (min-width : 768px){
+
+            .container{
+                width: 100%;
+                max-width: 1200px;
+                margin: 10px auto;
+                padding: 10px;
+                display: block;
+                
+            }
+
+            /* head 상단에 고정 */
+            .head{
+                box-sizing: border-box;
+            }
+
+            .menu{
+                border-radius: 50px;
+            }
+
+            h1 {
+                padding-top: 20px;
+                padding-bottom: 10px;
+                margin: 0;
+                text-align: center;
+            }
+
+            nav{
+                padding: 0.5rem 1rem;
+            }
+
+            nav > ul{
+                margin: 0;
+                display: flex;
+                justify-content: space-around;
+                padding: 20px;
+            }
+
+            div ty {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            /* 컨텐츠 */
+            .main{
+                display: block;
+                margin: 150px auto;
+                margin-top: 200px;
+            }
+
+            
+            .card {
+                max-width: 1200px;
+                max-height: 100%;
+                overflow-y: auto;
+                overflow-x: hidden;
+                background-color: white;
+                border-radius: 25px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+                margin-bottom: 100px;
+            }
+
+
+            .contents{
+                display: flex;
+                align-items: center;
+                padding: 50px;
+                justify-content: center;
+            }
+
+            #info-section .img{
+                width: 45%;
+            }
+
+            .img{
+                flex: 0 0 auto;
+                padding: 30px;
+            }
+
+            .myphoto {
+                width: 100%;
+                height: auto;
+                position: left;
+                border-top-right-radius: 50%;
+                border-top-left-radius: 50%;
+            }
+
+            .texts{
+                flex: 0 0 auto;
+                width: 55%;
+                height: 100%;
+                display: flex;
+                text-align: center;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: 0;
+                gap: 70px;
+            }
+
+            .text{
+                background-color: #f8f9fa;
+                padding: 10px 25px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                transition: 0.2s ease;
+            }
+
+            .video{
+                border-top-right-radius: 50%;
+                border-top-left-radius: 50%;
+            }
+
+
+            h3{
+                text-align: center;
+                margin: 0;
+                padding-bottom: 35px;
+                border-bottom: 1px solid #ccc;
+            }
+
+            .text-left {
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                gap: 40px;
+                padding-left: 40px;
+            }
+
+            .label{
+                font-weight: bold;
+                color: black;
+                font-size: 25px;
+            }
+
+            .value{
+                font-size: 25px;
+                color: #555;
+            }
+
+            /*hobby*/
+            .text-center{
+                text-align: center;
+                padding: 40px;
+            }
+
+            #hobby-section .contents img {
+                border-radius: 15px;
+                width: 300px;
+            }
+
+            #plan-section li{
+                margin-bottom: 10px;
+            }
+
+            #plan-section img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+            }
+        }
+
+        /* 모바일 */
+        @media (max-width: 768px) {
+
+            h1 {
+                text-align: center;
+            }
+
+            ul {
+                padding: 0 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .main{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #info-section {
+                margin-top: 200px;
+            }
+            .card {
+                position: relative;
+                width : 80%;
+                overflow: hidden;
+                overflow-x: hidden;
+                margin-bottom: 50px;
+                background-color: white;
+
+                border-radius: 25px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+                padding: 20px;
+            }
+
+            a{
+                font-size: 11px;
+            }
+
+            .card img {
+                max-width: 100%;
+            }
+            
+            .label{
+                font-weight: bold;
+                color: black;
+                font-size: 20px;
+            }
+
+            .value{
+                font-size: 20px;
+                color: #555;
+            }
+
+            .contents{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            /*info*/
+            .myphoto {
+                border-radius: 50%;
+            }
+
+            .texts{
+                flex: 0 0 auto;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .text{
+                background-color: #f8f9fa;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 10px;
+            }
+
+            /*exp*/
+            .video{
+                border-radius: 20px;
+            }
+            
+            h3{
+                text-align: center;
+            }
+
+            .exp-text{
+                text-align: center;
+            }
+
+            
+            .img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            img {
+                border-radius: 20px;
+                
+            }
+            
+            .text-center{
+                text-align: center;
+            }
+
+            h3 {
+                padding-bottom: 10px;
+                border-bottom: 1px solid #ccc;
+            }
+
+            /*plan-section*/
+            #plan-section ul {
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            #plan-section li{
+                text-align: left;
+            }
+
+
+        }
+
+        
+    </style>
+
+      <!-- 아이콘 폰트 CDN 링크하기 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>FE 박은서</h1>
+
+            <nav class="menu">
+                <ul>
+                    <li class="info-navi active" onclick="scrollToSection('info-section')" ><a href="#info-section"><i class="fa fa-user"></i>  자기소개</a></li>
+                    <li class="exp-navi" onclick="scrollToSection('exp-section')"><a href="#exp-section">✨ 좋았던 경험</a></li>
+                    <li class="hobby-navi" onclick="scrollToSection('hobby-section')"><a href="#hobby-section">💖 취미와 관심사</a></li>
+                    <li class="plan-navi" onclick="scrollToSection('plan-section')"><a href="#plan-section">📌 계획</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main">
+            <div id="info-section" class="card">
+                <div class="contents">
+
+                    <div class="img">
+                        <img class="myphoto" src="개인사진1.jpg">
+                    </div>
+
+                    <div class="texts">
+                        <div class="text">
+                            <span class="label">이름</span>
+                            <span class="value">박은서</span>
+                        </div>
+                        <div class="text">
+                            <span class="label">나이</span>
+                            <span class="value">2000.09.28</span>
+                        </div>
+
+                        <div class="text">
+                            <span class="label">전공</span>
+                            <span class="value">기술경영 + 컴퓨터 (복전)</span>
+                        </div>
+
+                        <div class="text">
+                            <span class="label">MBTI</span>
+                            <span class="value">ENFJ → INTJ</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="exp-section" class="card">
+                <div class="contents">
+                    <video loop autoplay muted class="video img">
+                        <source src="./video/shanghai.mp4" type="video/mp4">
+                        영상이 제공되지 않습니다.
+                    </video>
+
+                    <div class="texts label shanghai">
+
+                        <h3>✈️24.7 상하이✈️</h3>
+
+                        <div class="text-left exp-text" >
+                            <p>처음으로 혼자 간 상하이 여행입니다</p>
+                            <p>혼자만의 시간으로 힐링하기 너무 좋았어요</p>
+                            <p>유레카에서 좋은 인연으로 나중에 여행도<br>같이 가는 사이가 되었으면 좋겠어요!</p>
+                        </div>
+                        
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hobby-section" class="card">
+                <div class="contents">
+                    <img src="카페1.jpg">
+
+                    <div class="value text-center" >
+                        
+                            <p>✍️다이어리 쓰거나<br> 인생 계획을 세우거나<br> 일기를 쓰는, <b>적는 것</b>을 좋아합니다.</p>
+                            <p>☕예쁘게 꾸미고 <b>카공</b>가는 거<br>좋아하시는 분들 계세요?!?!</p>
+                            <p>🏋️‍♀️제가 요새 <b>헬스</b>도 시작했어요!</p>
+                        
+                    </div>
+                    <img src="카페2.jpg">
+
+                </div>
+            </div>
+
+            <div id="plan-section" class="card">
+                <div class="contents">
+                    <div class="img">
+                        <img src="자신감.jpg">
+                    </div>
+
+                    <div class="texts label text-left">
+                        <h3>할 겁니다.</h3>
+
+                        <ul>
+                            <li>✅ 주차 배운 내용 그 주에 복습 끝내기</li>
+                            <li>✅ 알고리즘 문제 2회독</li>
+                            <li><span class="accents">✅ CS 스터디</span>잘 진행하기</li>
+                            <li>✅ github 정리하기</li>
+                            <li>✅ 2025년 취업하기</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+            
+
+
+
+        </div>
+
+    </div>
+
+    <script>
+
+        /*메뉴 누를 때 화면에 해당 section 보이기*/
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const elementPosition = section.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = elementPosition - (window.innerHeight / 2) + (section.offsetHeight / 2);
+        
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        }
+        
+
+        /* 스크롤 이벤트에 따라 활성 메뉴 항목 변경 */
+        const menuItems = document.querySelectorAll('.menu li');
+        const sections = document.querySelectorAll('.card');
+
+        window.addEventListener('scroll', () =>{
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+
+                if (pageYOffset >= sectionTop - sectionHeight / 3){
+                    current = section.getAttribute('id');
+                }
+            });
+
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+                if(item.classList.contains(current + '-navi')){
+                    item.classList.add('active');
+                }
+            })
+        })
+
+    </script>
+    
+</body>
+</html>
