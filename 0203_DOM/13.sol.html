@@ -18,14 +18,12 @@
       position: relative;
     }
 
-    .btn{
+    button{
+      border:1px solid #ccc;
       position: absolute;
       bottom: 10px;
       right: 10px;
-    }
-
-    button{
-      border:1px solid #ccc;
+      background: none;
     }
 
   </style>
@@ -35,7 +33,6 @@
 
   <div id="popup">
     <h1>공지사항</h1>
-
     <ul>
       <li>공지사항 내용</li>
       <li>공지사항 내용</li>
@@ -44,19 +41,24 @@
       <li>공지사항 내용</li>
     </ul>
 
-    <div class="btn" onclick="closeBtn()">
-      <button>닫기</button>
-    </div>
+    <!-- <button onclick="closeBtn()">닫기</button> -->
+    <button>닫기</button>
     
   </div>
 
   <script>
 
-    function closeBtn(){
-      console.log("클릭");
-      const popup = document.querySelector("#popup");
+    // function closeBtn(){
+    //   const popup = document.querySelector("#popup");
+    //   popup.style.display = 'none';
+    // }
+
+    const popup = document.querySelector('#popup');
+    const closeBtn = document.querySelector('#popup > button');
+    
+    closeBtn.addEventListener('click', function() {
       popup.style.display = 'none';
-    }
+    });
     
 
   </script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>입력값 밑에 추가하기</title>
+
+  <style>
+    input{
+      border-radius: 5px;
+    }
+
+    button{
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>Web Programming</h1>
+  <p>공부할 주제를 기록해 보세요</p>
+
+  <form id="form">
+      <label for="input">주제</label>
+      <input id="input" type="text">
+      <button type="submit">추가</button>
+
+    <hr>
+
+    <ul>
+      <li>추가할게요</li>
+    </ul>
+
+  </form>
+
+  <script>
+    const form = document.querySelector('.form');
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      
+      var msg = input
+    })
+  </script>
+</body>
+</html>
