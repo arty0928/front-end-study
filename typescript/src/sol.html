@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가위바위보 게임</title>
+</head>
+
+  <style>
+    .container{
+      width: 400px;
+      height: 100vh;
+      display: flex;
+      margin: 0 auto;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+
+    h1{
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .view{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card{
+      background-color: white;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 10px #ccc;
+    }
+
+    .choose{
+      display: flex;
+      gap: 50px;
+    }
+
+    .button{
+      font-size: 1.2em;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      padding: 10px 20px;
+      box-shadow: 1px 1px 10px #ccc;
+      background-color: white;
+      transition: 0.3s ease;
+    }
+
+    .button:hover{
+      transform: scale(1.1);
+      color: white;
+      background-color: black;
+    }
+
+    .computer{
+      width: 100px;
+    }
+  </style>
+<!-- 컴퓨터 
+      승패
+      
+  가위 바위 보  버튼 클릭 시 컴퓨터 값과 승패 버튼 보이기-->
+<body>
+
+  <div class="container">
+    <h1> 가위바위보 게임 </h1>
+    <div class="view">
+      <img class="card computer" src="/images/question.png">
+    </div>
+
+
+
+    <div class="choose view">
+      <img class="button rock" src='/images/rock.png' width="100px">
+      <img class="button scissor" src='/images/scissors.png' width="100px">
+      <img class="button paper" src='/images/paper.png' width="100px">
+
+    </div>
+
+    <div class="view">
+      <div class="card">
+        <p class="result">0전 0승 0패</p>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script src="rock-scissor-paper.js"></script>
+  
+</body>
+</html>
