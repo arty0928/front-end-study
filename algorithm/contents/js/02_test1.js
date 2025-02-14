@@ -17,8 +17,7 @@ for (let i = 1; i <= inputCount; i++) {
 
 console.log(testCases);
 
-const solution = {
-  ({N, scores}) => {
-    
+const solution = ({N, scores}) => {
+    const average = scores.reduce((acc, cur) => acc + cur, 0) / 2;
+
   }
-}
